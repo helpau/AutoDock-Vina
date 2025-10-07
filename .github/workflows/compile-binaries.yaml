@@ -1,25 +1,7 @@
 name: Compile AutoDock-Vina binaries
 
 on:
-  push:
-    branches:
-      - master
-      - develop
-    paths-ignore:
-      - 'example/**'
-      - 'docs/**'
-      - 'data/**'
-  pull_request:
-    branches:
-      - master
-      - develop
-    paths-ignore:
-      - 'example/**'
-      - 'docs/**'
-      - 'data/**'
-  release:
-    types:
-      - published
+  workflow_dispatch:
 
 jobs:
   compile_binaries:
