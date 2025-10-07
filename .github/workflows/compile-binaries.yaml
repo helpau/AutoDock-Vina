@@ -1,7 +1,8 @@
 name: Compile AutoDock-Vina binaries
 
 on:
-  workflow_dispatch:
+  pull_request:
+    branches: [ lto ]
 
 jobs:
   compile_binaries:
