@@ -12,7 +12,7 @@ C_OPTIONS+=-DVERSION=\"$(GIT_VERSION)\"
 
 # -pedantic fails on Mac with Boost 1.41 (syntax problems in their headers)
 #CC = ${GPP} ${C_PLATFORM} -ansi -pedantic -Wno-long-long ${C_OPTIONS} $(INCFLAGS)
-CC = ${GPP} ${C_PLATFORM} -ansi -Wno-long-long -flto=thin ${C_OPTIONS} $(INCFLAGS)
+CC = ${GPP} ${C_PLATFORM} -ansi -Wno-long-long -flto=auto ${C_OPTIONS} $(INCFLAGS)
 
 LDFLAGS = -L$(BASE)/lib -L. -flto=auto
 
